@@ -231,7 +231,7 @@ void uci() {
                 assert(token == "moves");
 
                 while (iss >> token) {
-                    uci_root_pos.do_move(token);
+                    assert(uci_root_pos.do_move(token));
                 }
             }
 

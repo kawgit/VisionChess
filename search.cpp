@@ -93,7 +93,7 @@ Eval search(Pos& pos, Depth depth, Eval alpha, Eval beta, ThreadInfo& ti, Search
 
 	if (pos.insufficient_material()) return 0;
 	if (pos.hm_clock >= 4) {
-		if (pos.hm_clock == 50) return 0;
+		if (pos.hm_clock >= 50) return 0;
 		if (pos.one_repetition(ti.root_ply)) return 0;
 		if (pos.three_repetitions()) return 0;
 	}
